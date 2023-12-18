@@ -3,7 +3,7 @@ import { productsContext } from "../../contexts/Products";
 import { breadcrumbsContext } from "../../contexts/BreadcrumsContext";
 
 export const Search = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
   const [errror, setError] = useState();
   const [query, setQuery] = useState("");
   const { setProducts } = useContext(productsContext);
@@ -34,7 +34,7 @@ export const Search = () => {
         }
         setError(e);
       } finally {
-        setIsLoading(false);
+        // setIsLoading(false);
       }
     };
     fetchSearch();
@@ -48,6 +48,8 @@ export const Search = () => {
     ).value;
     setQuery(searchValue);
   };
+
+  if (errror) return <div>{errror}</div>;
 
   return (
     <>
