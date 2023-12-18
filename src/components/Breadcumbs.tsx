@@ -1,4 +1,14 @@
-const Breadcumbs = ({ breadcrumbs }) => {
+import React from "react";
+
+interface Breadcrumb {
+  name: string;
+}
+
+interface BreadcrumbsProps {
+  breadcrumbs: Breadcrumb[];
+}
+
+const Breadcumbs: React.FC<BreadcrumbsProps> = ({ breadcrumbs }) => {
   return (
     <div className="w-full m-2 pr-20">
       {breadcrumbs && breadcrumbs.length > 0 && (

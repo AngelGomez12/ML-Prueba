@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 const breadcrumbsContext = createContext({
   breadcrumbs: [],
-  setBreadcrumbs: (breadcrumbs: any) => {},
+  setBreadcrumbs: (_breadcrumbs: any) => {},
 });
 
 const BreadcrumbsProvider: React.FC<{ children: React.ReactNode }> = ({
